@@ -12,7 +12,7 @@ intents = discord.Intents.default()
 intents.message_content = True  
 
 # Bot nesnesini başlatıyoruz, prefix '!'
-bot = commands.Bot(command_prefix='!', intents=intents)
+bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 
 # Modüler komut ve event dosyalarını (cogs) yükleme fonksiyonu
 async def load_extensions():

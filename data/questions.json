@@ -1,0 +1,37 @@
+[
+    {
+        "question": "İlk FIRST Robotics Competition (FRC) oyunu hangi yılda oynanmıştır?",
+        "options": ["A) 1989", "B) 1992", "C) 1996", "D) 1998"],
+        "correct_answer": "B",
+        "category": "Tarih",
+        "difficulty": "Orta"
+    },
+    {
+        "question": "Pusula (Bumper) kurallarında standart tampon numaralarının en az kaç inç (inch) boyunda olması istenir?",
+        "options": ["A) 2 inç", "B) 3 inç", "C) 4 inç", "D) 5 inç"],
+        "correct_answer": "C",
+        "category": "Mekanik/Kurallar",
+        "difficulty": "Orta"
+    },
+    {
+        "question": "Woodie Flowers Ödülü (WFA) kimlere verilir?",
+        "options": ["A) En iyi sürücüye", "B) Güvenlik kaptanlarına", "C) Gönüllülere", "D) İlham veren mentorlara"],
+        "correct_answer": "D",
+        "category": "Ödüller",
+        "difficulty": "Kolay"
+    },
+    {
+        "question": "Standart bir FRC maçında periyotlar sırasıyla nasıldır?",
+        "options": ["A) Teleop -> Otonom -> Endgame", "B) Otonom -> Teleop -> Endgame", "C) Teleop -> Endgame", "D) Otonom -> Teleop"],
+        "correct_answer": "B",
+        "category": "Oyun İçi",
+        "difficulty": "Kolay"
+    },
+    {
+        "question": "Bir FRC robotunun temel kontrol/haberleşme beyni hangi bileşendir?",
+        "options": ["A) Motor Controller", "B) roboRIO", "C) VRM (Voltage Regulator Module)", "D) PDP (Power Distribution Panel)"],
+        "correct_answer": "B",
+        "category": "Elektrik/Yazılım",
+        "difficulty": "Kolay"
+    }
+]

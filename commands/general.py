@@ -11,13 +11,13 @@ class General(commands.Cog):
         gecikme = round(self.bot.latency * 1000)
         await ctx.send(f"🏓 Pong! Gecikme süresi: **{gecikme}ms**")
 
-    @commands.command(name="merhaba")
-    async def merhaba(self, ctx):
+    @commands.command(name="hello")
+    async def hello(self, ctx):
         """Kullanıcıyı etiketleyerek selam verir."""
         await ctx.send(f"Merhaba kanka, nasılsın? {ctx.author.mention} 👋")
 
-    @commands.command(name="sunucu")
-    async def sunucu(self, ctx):
+    @commands.command(name="server")
+    async def server(self, ctx):
         """Sunucu hakkında genel bilgileri bir embed içinde gösterir."""
         guild = ctx.guild
         
@@ -41,8 +41,8 @@ class General(commands.Cog):
             
         await ctx.send(embed=embed)
 
-    @commands.command(name="kullanici", aliases=["kullanıcı"])
-    async def kullanici(self, ctx, uye: discord.Member = None):
+    @commands.command(name="user", aliases=["userinfo"])
+    async def user(self, ctx, uye: discord.Member = None):
         """Belirtilen kullanıcının veya komutu kullananın bilgilerini gösterir."""
         # Eğer bir kullanıcı etiketlenmemişse otomatik olarak mesajı yazan (ctx.author) alınsın
         uye = uye or ctx.author
@@ -68,6 +68,36 @@ class General(commands.Cog):
         else:
             embed.set_thumbnail(url=uye.default_avatar.url)
 
+        await ctx.send(embed=embed)
+
+    @commands.command(name="commands", aliases=["help"])
+    async def all_commands(self, ctx):
+        """Botun sahip olduğu tüm komutları kategorilerine göre listeler ve ne işe yaradıklarını açıklar."""
+        embed = discord.Embed(
+            title="📚 Sistem Komutları ve Açıklamaları",
+            description="Aşağıda botun sahip olduğu komutların tam listesini ve kullanımlarını bulabilirsiniz:",
+            color=discord.Color.purple()
+        )
+        
+        # Bot içindeki tüm 'Cog' (Modül) sınıflarını geziyoruz
+        for cog_name, cog in self.bot.cogs.items():
+            komut_listesi = cog.get_commands()
+            
+            # Eğer bu cog içinde bir komut varsa
+            if komut_listesi:
+                komut_metni = ""
+                for komut in komut_listesi:
+                    if not komut.hidden:
+                        aciklama = komut.help or "Açıklama bulunmuyor."
+                        komut_metni += f"🔹 **!{komut.name}** : {aciklama}\n"
+                
+                if komut_metni:
+                    embed.add_field(name=f"📌 {cog_name} Modülü", value=komut_metni, inline=False)
+
+        # Avatar özelliğine göre footer resmi
+        icon_url = ctx.author.avatar.url if ctx.author.avatar else ctx.author.default_avatar.url
+        embed.set_footer(text=f"İsteyen: {ctx.author.name}", icon_url=icon_url)
+        
         await ctx.send(embed=embed)
 
 # main.py dosyası eklentileri ararken bota bu cog'u tanıttığımız yer burasıdır

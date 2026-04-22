@@ -1,0 +1,32 @@
+{
+    "yazilim": {
+        "title": "💻 Yazılım (Software) Desteği",
+        "description": "Robot kodu, otonom yazılımı, görüntü işleme (Vision pipeline) veya WPILib kütüphane sorunları hakkında takıldığınız yerleri bu alanda danışabilirsiniz.",
+        "suggested_channel": "#yazilim-yardim",
+        "suggested_role": "@Yazılım Mentoru"
+    },
+    "mekanik": {
+        "title": "⚙️ Mekanik & Tasarım Desteği",
+        "description": "Robot şasisi, dişli oranları, motor seçimleri, pnömatik sistemler ve CAD (SolidWorks vb.) tasarımı ile ilgili teknik konulardaki sorularınız içindir.",
+        "suggested_channel": "#mekanik-yardim",
+        "suggested_role": "@Mekanik Ekibi"
+    },
+    "elektrik": {
+        "title": "⚡ Elektrik & Elektronik Desteği",
+        "description": "CAN hattı hataları, roboRIO konfigürasyonları, motor sürücü (Talon/Spark) ve batarya, güç panosu (PDH) kablolama sorunları için.",
+        "suggested_channel": "#elektrik-yardim",
+        "suggested_role": "@Elektrik Ekibi"
+    },
+    "scouting": {
+        "title": "📋 Scouting & Veri Analizi Desteği",
+        "description": "Maç istatistikleri, veri formları oluşturma (App veya kağıt tabanlı) ve turnuva sırası veri takibi alanındaki sorular için.",
+        "suggested_channel": "#scouting-ve-veri",
+        "suggested_role": "@Scouting Kaptanı"
+    },
+    "strategy": {
+        "title": "♟️ Oyun Stratejisi Desteği",
+        "description": "Oyun kurallarını anlama (Game Manual), takım bazlı defansif/ofansif oyun kurgusu ve pick-list oluşturma taktikleri.",
+        "suggested_channel": "#strateji-analizi",
+        "suggested_role": "@Strateji Mentoru"
+    }
+}
